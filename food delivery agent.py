@@ -92,3 +92,8 @@ class FoodDeliveryAgent:
         self.get_address()
         print(
             f"Agent: Your order for {self.order_str} will be delivered to {self.address}. Thank you for ordering!\n\n")
+
+
+if __name__ == "__main__":
+    agent = FoodDeliveryAgent()
+    agent.start()
