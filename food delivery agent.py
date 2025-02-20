@@ -67,3 +67,4 @@ class FoodDeliveryAgent:
             print("Agent: Please enter a valid phrase to proceed.")
 
         self.show_menu()
+        self.get_order()
