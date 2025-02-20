@@ -27,6 +27,29 @@ class FoodDeliveryAgent:
 
         print("Please type the item(s) you want to order (separate with commas if more than one).\n")
 
+    def get_order(self):
+        '''
+        User: pasta, burger, salad
+        '''
+
+        choices = input("User: ")
+        order = [itm.strip().title() for itm in choices.split(',')]
+        unknown = []
+
+        for item in order:
+            if item in self.menu:
+                self.order.append(item)
+                self.total += self.menu[item]
+            else:
+                unknown.append(item)
+
+        if unknown != []:
+            if len(unknown) == 1:
+                print(f"Agent: Sorry! {unknown[0]} is not on the menu.")
+            else:
+                print(
+                    f"Agent: Sorry! {','.join(unknown)} are not on the menu.")
+
     def start(self):
         '''
         Agent: Hello! How can I assist you today?
