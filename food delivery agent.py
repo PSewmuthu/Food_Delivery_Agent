@@ -61,6 +61,15 @@ class FoodDeliveryAgent:
             print(
                 f"Agent: You have chosen {order_str}. The total is ${self.total}.")
 
+    def get_address(self):
+        '''
+        Please provide your delivery address: 
+        User: 123 Main St, Cityville 
+        '''
+
+        print("Please provide your delivery address:")
+        self.address = input("User: ").strip()
+
     def start(self):
         '''
         Agent: Hello! How can I assist you today?
@@ -79,3 +88,4 @@ class FoodDeliveryAgent:
 
         self.show_menu()
         self.get_order()
+        self.get_address()
