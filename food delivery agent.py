@@ -29,7 +29,8 @@ class FoodDeliveryAgent:
 
     def get_order(self):
         '''
-        User: pasta, burger, salad
+        User: Pizza, Pasta 
+        Agent: You have chosen Pizza and Pasta. The total is $15.
         '''
 
         choices = input("User: ")
@@ -49,6 +50,16 @@ class FoodDeliveryAgent:
             else:
                 print(
                     f"Agent: Sorry! {','.join(unknown)} are not on the menu.")
+
+        if len(self.order) == 1:
+            print(
+                f"Agent: You have chosen {self.order[0]}. The total is ${self.total}.")
+        elif len(self.order) == 2:
+            order_str = ', '.join(self.order[:-1])
+            order_str = order_str + ', and ' + self.order[-1]
+
+            print(
+                f"Agent: You have chosen {order_str}. The total is ${self.total}.")
 
     def start(self):
         '''
