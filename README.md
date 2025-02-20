@@ -4,6 +4,8 @@ This repository contains a simple **Food Delivery Agent** developed as part of t
 
 ## 📌 Features
 
+<img src="Screenshots/Screenshot 2025-02-20 161137.png">
+
 - Displays a list of available food items with prices.
 - Allows users to select multiple food items.
 - Calculates the total cost of the selected items.
