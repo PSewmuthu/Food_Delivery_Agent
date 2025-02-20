@@ -13,10 +13,10 @@ class FoodDeliveryAgent:
     def show_menu(self):
         '''
         Agent: Welcome to Food Delivery! Here are the items we have: 
-        1. Pizza - $8 
-        2. Burger - $5 
-        3. Pasta - $7 
-        4. Salad - $4 
+        1. Pizza     -   $8 
+        2. Burger    -   $5 
+        3. Pasta     -   $7 
+        4. Salad     -   $4 
         Please type the item(s) you want to order (separate with commas if more than one).
         '''
 
@@ -26,3 +26,21 @@ class FoodDeliveryAgent:
             print(f"{num}. {itm}\t - \t${amnt}")
 
         print("Please type the item(s) you want to order (separate with commas if more than one).\n")
+
+    def start(self):
+        '''
+        Agent: Hello! How can I assist you today?
+        User: I want to order food.
+        '''
+
+        print("Agent: Hello! How can I assist you today?")
+
+        while True:
+            prompt = input("User: ")
+
+            if 'order food' in prompt.lower():
+                break
+
+            print("Agent: Please enter a valid phrase to proceed.")
+
+        self.show_menu()
