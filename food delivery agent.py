@@ -61,9 +61,10 @@ class FoodDeliveryAgent:
                     f"Agent: Sorry! {','.join(unknown)} are not on the menu.")
 
         if len(self.order) == 1:
+            self.order_str = self.order[0]
             print(
                 f"Agent: You have chosen {self.order[0]}. The total is ${self.total}.")
-        elif len(self.order) == 2:
+        elif len(self.order) > 1:
             order_str = ', '.join(self.order[:-1])
             self.order_str = order_str + ', and ' + self.order[-1]
 
