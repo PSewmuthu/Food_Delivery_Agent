@@ -9,6 +9,7 @@ class FoodDeliveryAgent:
         self.order = []
         self.total = 0
         self.address = ''
+        self.order_str = ''
 
     def show_menu(self):
         '''
@@ -56,10 +57,10 @@ class FoodDeliveryAgent:
                 f"Agent: You have chosen {self.order[0]}. The total is ${self.total}.")
         elif len(self.order) == 2:
             order_str = ', '.join(self.order[:-1])
-            order_str = order_str + ', and ' + self.order[-1]
+            self.order_str = order_str + ', and ' + self.order[-1]
 
             print(
-                f"Agent: You have chosen {order_str}. The total is ${self.total}.")
+                f"Agent: You have chosen {self.order_str}. The total is ${self.total}.")
 
     def get_address(self):
         '''
@@ -89,3 +90,5 @@ class FoodDeliveryAgent:
         self.show_menu()
         self.get_order()
         self.get_address()
+        print(
+            f"Agent: Your order for {self.order_str} will be delivered to {self.address}. Thank you for ordering!\n\n")
